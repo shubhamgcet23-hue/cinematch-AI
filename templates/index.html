@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CineMatch | Hybrid Movie Recommendation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark">
+
+    <div class="container">
+
+        <span class="brand">
+            🎬 CineMatch
+        </span>
+
+    </div>
+
+</nav>
+
+<div class="container hero">
+
+    <h1 class="display-3 fw-bold">
+
+        Discover Your Next Favorite Movie
+
+    </h1>
+
+    <p class="lead text-light mb-5">
+
+        Hybrid Movie Recommendation System using
+        <strong>Collaborative Filtering</strong> &
+        <strong>Content-Based Filtering</strong>
+
+    </p>
+
+    <div class="row text-center mb-5">
+
+        <div class="col-md-4">
+
+            <h2 class="text-danger">9,742</h2>
+
+            <p>Movies</p>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <h2 class="text-danger">610</h2>
+
+            <p>Users</p>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <h2 class="text-danger">100,836</h2>
+
+            <p>Ratings</p>
+
+        </div>
+
+    </div>
+
+    <form action="/recommend" method="POST">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <select
+                    id="movie"
+                    name="movie"
+                    class="form-select">
+
+                    {% for movie in movies %}
+
+                    <option>{{ movie }}</option>
+
+                    {% endfor %}
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <button
+            id="recommendBtn"
+            class="btn btn-recommend btn-lg">
+
+            🎬 Get Recommendations
+
+        </button>
+
+    </form>
+
+</div>
+
+<footer class="text-center mt-5 mb-4">
+
+    <hr>
+
+    <p>
+
+        Developed by <strong>Shubham Kumar</strong>
+
+    </p>
+
+    <small>
+
+        Hybrid Movie Recommendation System • Flask • Machine Learning
+
+    </small>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $("#movie").select2({
+
+        placeholder: "Search Movie",
+
+        width: "100%"
+
+    });
+
+});
+
+document.querySelector("form").addEventListener("submit", function(){
+
+    const btn = document.getElementById("recommendBtn");
+
+    btn.innerHTML = "Loading...";
+
+    btn.disabled = true;
+
+});
+
+</script>
+
+</body>
+
+</html>

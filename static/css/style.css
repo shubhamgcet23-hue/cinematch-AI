@@ -1,0 +1,189 @@
+body{
+    background:#141414;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    background:#000;
+}
+
+.brand{
+    color:#E50914;
+    font-weight:bold;
+    font-size:32px;
+}
+
+.hero{
+    margin-top:80px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:48px;
+    font-weight:bold;
+}
+
+.hero p{
+    color:#bbbbbb;
+    font-size:20px;
+}
+
+.select2-container--default .select2-selection--single{
+    height:48px;
+    border-radius:10px;
+}
+
+.btn-recommend{
+    background:#E50914;
+    color:white;
+    border:none;
+    padding:12px 40px;
+    font-size:18px;
+    border-radius:10px;
+}
+
+.btn-recommend:hover{
+    background:#b20710;
+    color:white;
+}
+
+.movie-card{
+    background:#222;
+    border:none;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.movie-card:hover{
+    transform:scale(1.05);
+}
+
+.movie-card img{
+    border-radius:15px 15px 0 0;
+}
+
+.score{
+    color:#ffc107;
+    font-weight:bold;
+}
+
+.genre{
+    color:#bbbbbb;
+}
+
+.card{
+    overflow:hidden;
+}
+
+.card img{
+    transition:0.4s;
+}
+
+.card:hover img{
+    transform:scale(1.08);
+}
+
+.card-title{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.btn-danger{
+    background:#E50914;
+    border:none;
+}
+
+.btn-danger:hover{
+    background:#b20710;
+}
+
+hr{
+    border-color:#444;
+}
+
+.card-body{
+    color:white;
+}
+
+/* ===========================
+   Select2 Dark Theme
+=========================== */
+
+.select2-container{
+    width:100% !important;
+}
+
+.select2-container--default .select2-selection--single{
+
+    background:#222 !important;
+
+    border:2px solid #333 !important;
+
+    color:white !important;
+
+    height:55px !important;
+
+    border-radius:12px;
+
+}
+
+.select2-container--default .select2-selection__rendered{
+
+    color:white !important;
+
+    line-height:50px !important;
+
+    font-size:18px;
+
+}
+
+.select2-container--default .select2-selection__arrow{
+
+    height:55px !important;
+
+}
+
+.select2-dropdown{
+
+    background:#222 !important;
+
+    border:1px solid #444 !important;
+
+}
+
+.select2-search__field{
+
+    background:#333 !important;
+
+    color:white !important;
+
+    border:none !important;
+
+}
+
+.select2-results__option{
+
+    color:white !important;
+
+    padding:12px;
+
+}
+
+.select2-results__option--highlighted{
+
+    background:#E50914 !important;
+
+}
+
+.select2-results__option--selected{
+
+    background:#444 !important;
+
+}
+
+.select2-search--dropdown{
+
+    background:#222;
+
+}
